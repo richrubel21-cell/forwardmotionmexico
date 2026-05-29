@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal — Forward Motion USA</title>
+<meta name="description" content="Forward Motion USA legal information — Florida nonprofit corporation, EIN, and 501(c)(3) status." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf8f4; --cream-2: #f5f0e4; --paper: #ffffff;
+    --navy: #0b1f3a; --navy-2: #0e2545;
+    --green: #2d8a4e; --green-2: #38a55d; --green-3: #4ec273;
+    --purple: #6b35a3; --purple-2: #8048c0; --purple-3: #9a63d8;
+    --gold: #b8852a; --gold-2: #d4a13d; --gold-3: #f4c769;
+    --ink: #1a1a1a; --muted: #6b7280; --line: rgba(11, 31, 58, 0.10);
+    --display: "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: var(--sans); color: var(--ink); background: var(--cream);
+    line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    display: flex; flex-direction: column; min-height: 100vh; overflow: auto;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  .nav {
+    position: relative; z-index: 5; display: flex; align-items: center; gap: 14px;
+    padding: 14px 36px; background: var(--cream);
+    border-bottom: 1px solid var(--line); flex: 0 0 auto;
+  }
+  .nav::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--green) 0%, var(--gold-2) 50%, var(--purple) 100%);
+  }
+  .brand {
+    font-weight: 800; font-size: 16px; color: var(--navy); letter-spacing: -0.3px;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .brand-mark {
+    width: 26px; height: 26px; border-radius: 50%; background: #000;
+    display: grid; place-items: center; color: var(--paper);
+    font-weight: 800; font-size: 11px;
+  }
+  .nav-links {
+    list-style: none; display: flex; gap: 22px;
+    margin-left: auto; margin-right: 18px; align-items: center;
+  }
+  .nav-links a {
+    font-size: 13px; font-weight: 600; color: var(--navy);
+    letter-spacing: 0.3px; transition: color .15s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a.active { color: var(--gold); }
+  .nav-cta {
+    background: linear-gradient(135deg, #9b59d0, #20b2aa); color: var(--paper);
+    padding: 9px 20px; border-radius: 999px;
+    font-size: 12.5px; font-weight: 700; letter-spacing: 0.4px;
+    border: 1.5px solid var(--green);
+    transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .nav-cta:hover {
+    background: linear-gradient(135deg, #b070e0, #3dcfc7);
+    border-color: var(--green-2); transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(45, 138, 78, 0.35);
+  }
+  .nav-burger {
+    display: none;
+    background: none; border: 0;
+    font-size: 22px; color: var(--navy);
+    cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
+  }
+  .nav-burger:hover { color: var(--gold); }
+
+  /* PAGE HERO */
+  .page-hero {
+    flex: 0 0 auto;
+    min-height: 220px;
+    background-color: #faf8f4;
+  }
+
+  /* PAGE */
+  main.page {
+    flex: 1 1 auto; display: flex; flex-direction: column;
+    padding: 0 24px 40px; max-width: 1080px; margin: 0 auto; width: 100%;
+  }
+  .content-card {
+    background: var(--paper);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 900px;
+    margin: -60px auto 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  .page-mark {
+    font-size: 11px; font-weight: 700; color: var(--gold);
+    letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px;
+  }
+  .page-headline {
+    font-family: var(--display); font-size: clamp(34px, 4.6vw, 56px);
+    color: var(--navy); letter-spacing: 1.2px; line-height: 1; margin-bottom: 18px;
+  }
+
+  .legal-grid {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 18px;
+  }
+  .legal-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    padding: 8px 22px;
+    border-bottom: 1px solid var(--line);
+    font-size: 13px;
+  }
+  .legal-row:last-child { border-bottom: 0; }
+  .legal-key {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .legal-val {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .legal-section-title {
+    font-family: var(--display);
+    font-size: 13px;
+    color: var(--navy);
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+  }
+  .legal-mission {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.6;
+    max-width: 880px;
+    margin-bottom: 18px;
+  }
+
+  .page-note {
+    margin-top: auto;
+    padding-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+  }
+  .page-note a { color: var(--navy); font-weight: 600; }
+  .page-note a:hover { color: var(--green); }
+
+  /* FOOTER */
+  footer {
+    flex: 0 0 auto; background: var(--cream-2); color: var(--muted);
+    padding: 10px 36px; font-size: 11.5px; text-align: center;
+    border-top: 1px solid var(--line); letter-spacing: 0.3px;
+  }
+  footer a { color: var(--navy); font-weight: 600; }
+  footer a:hover { color: var(--green); }
+  footer .sep { opacity: 0.4; margin: 0 9px; }
+
+  /* RESPONSIVE */
+  @media (max-width: 980px) {
+    body { overflow: auto; }
+    main.page { padding: 28px 22px; overflow: visible; }
+    .legal-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  @media (max-width: 768px) {
+    .nav { position: relative; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; background: var(--cream);
+      border-bottom: 1px solid var(--line);
+      padding: 14px 24px; gap: 14px; margin: 0; z-index: 10;
+      box-shadow: 0 10px 22px rgba(11, 31, 58, 0.12);
+    }
+    .nav-links.open { display: flex; }
+    .nav-burger { display: inline-block; }
+  }
+  @media (max-width: 540px) {
+    .nav { padding: 12px 18px; gap: 8px; }
+    footer .sep { display: block; height: 4px; opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">FM</span>
+    Forward Motion USA
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Who We Are</a></li>
+    <li><a href="partners.html">Partners</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="legal.html" class="active">Legal</a></li>
+    <li><a href="donate.html">Donate</a></li>
+  </ul>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
+</nav>
+
+<section class="page-hero"></section>
+
+<main class="page">
+  <div class="content-card">
+    <div class="page-mark">Legal &amp; Compliance</div>
+    <h1 class="page-headline">Legal Information</h1>
+
+    <div class="legal-grid">
+    <div class="legal-row"><span class="legal-key">Organization Name</span><span class="legal-val">Forward Motion Project, Inc.</span></div>
+    <div class="legal-row"><span class="legal-key">Legal Structure</span><span class="legal-val">Florida Nonprofit Corporation</span></div>
+    <div class="legal-row"><span class="legal-key">Document Number</span><span class="legal-val">N26000005642</span></div>
+    <div class="legal-row"><span class="legal-key">Effective Date</span><span class="legal-val">April 17, 2026</span></div>
+    <div class="legal-row"><span class="legal-key">EIN</span><span class="legal-val">42-1998712</span></div>
+    <div class="legal-row"><span class="legal-key">501(c)(3) Status</span><span class="legal-val">Approved — Effective April 17, 2026</span></div>
+  </div>
+
+  <h2 class="legal-section-title">Mission Statement</h2>
+  <p class="legal-mission">Forward Motion Project exists to provide free, AI-powered athletic development tools to youth athletes worldwide — connecting young players with coaches and creating accurate, comparable athletic data so every athlete can be measured against the same standard, regardless of resources.</p>
+
+    <p class="page-note">Contact: <a href="mailto:rich.rubel@forwardmotionusa.org">rich.rubel@forwardmotionusa.org</a> · <a href="mailto:kevin.barr@forwardmotionusa.org">kevin.barr@forwardmotionusa.org</a></p>
+  </div>
+</main>
+
+<footer>
+  Forward Motion USA <span class="sep">·</span>
+  <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
+  <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
+</footer>
+
+<script>
+  (function(){
+    var burger = document.querySelector('.nav-burger');
+    var links = document.querySelector('.nav-links');
+    if (!burger || !links) return;
+    burger.addEventListener('click', function() {
+      var open = links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open);
+    });
+  })();
+</script>
+
+</body>
+</html>
