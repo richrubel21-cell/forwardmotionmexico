@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Who We Are — Forward Motion USA</title>
-<meta name="description" content="The co-founders of Forward Motion USA — Kevin Barr and Rich Rubel — and the experience behind the mission." />
+<title data-es="Who We Are — Forward Motion Project México" data-en="Who We Are — Forward Motion Project México">Who We Are — Forward Motion Project México</title>
+<meta name="description" data-es-content="The co-founders of Forward Motion Project México — Kevin Barr and Rich Rubel — and the experience behind the mission." data-en-content="The co-founders of Forward Motion Project México — Kevin Barr and Rich Rubel — and the experience behind the mission." content="The co-founders of Forward Motion Project México — Kevin Barr and Rich Rubel — and the experience behind the mission." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     display: grid; place-items: center; color: var(--paper);
     font-weight: 800; font-size: 11px;
   }
+  .brand-flag {
+    width: 22px; height: auto; border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle; flex: 0 0 auto;
+  }
   .nav-links {
     list-style: none; display: flex; gap: 22px;
     margin-left: auto; margin-right: 18px; align-items: center;
@@ -76,6 +81,23 @@
     cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
 
   /* PAGE HERO */
   .page-hero {
@@ -273,18 +295,20 @@
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html" class="active">Who We Are</a></li>
-    <li><a href="partners.html">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" class="active" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -292,51 +316,55 @@
 
 <main class="page">
   <div class="content-card">
-    <div class="page-mark">Co-Founders</div>
-    <h1 class="page-headline">Who We Are</h1>
-    <div class="founders">
-      <article class="founder kevin">
-        <div class="founder-name">Kevin Barr</div>
-        <div class="founder-title">Co-Founder &amp; Athletic Development Director</div>
-        <p class="founder-bio">Kevin Barr spent almost 30 years working with Major League Baseball players starting in 1993 — designing the training and physical development programs that keep elite athletes performing at the highest level. He worked with the Florida Marlins, Kansas City Royals, Cincinnati Reds, and spent 14 years with the Tampa Bay Rays. In 2008, he was voted MLB Coach of the Year by his peers. Kevin has personally tracked over 12,000 youth athletes, building one of the most comprehensive athletic development datasets in the country. He also consulted for the Los Angeles Dodgers.</p>
-      </article>
-      <article class="founder rich">
-        <div class="founder-name">Rich Rubel</div>
-        <div class="founder-title">Co-Founder &amp; Technical Director</div>
-        <p class="founder-bio">Rich Rubel is a former Division I baseball player at the University of Connecticut. He has coached at South Lake Tahoe High School, served as hitting coach at Colorado School of Mines, and owned a premier training facility in Las Vegas. With a B.S. in Information Technology, Rich founded SwingCheck AI and PredictWell Health AI — the technology backbone powering Forward Motion USA's mission worldwide.</p>
+    <div class="page-mark" data-es="Forward Motion Project México" data-en="Forward Motion Project México">Forward Motion Project México</div>
+    <h1 class="page-headline" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</h1>
+
+    <div class="advisor-section">
+      <div class="advisor-section-mark" data-es="Embajador en México" data-en="Ambassador to Mexico">Embajador en México</div>
+      <article class="advisor jorge">
+        <img class="advisor-photo-img" src="images/Jorge_Cantu.png" alt="Jorge Cantú">
+        <div class="advisor-content">
+          <div class="advisor-name">Jorge Cantú</div>
+          <div class="advisor-title" data-es="Embajador en México y Miembro de la Junta" data-en="Ambassador to Mexico &amp; Board Member">Embajador en México y Miembro de la Junta</div>
+          <p class="advisor-bio" data-es="Jorge Cantú es un infielder mexicano nacido en Estados Unidos, ex jugador profesional de béisbol que pasó ocho años en las Grandes Ligas (2004–2011), jugando para los Tampa Bay Rays, Cincinnati Reds, Florida Marlins, Texas Rangers y San Diego Padres. Nacido en McAllen, Texas y criado en Reynosa, Tamaulipas, México, Jorge tiene raíces profundas a ambos lados de la frontera. Registró una línea ofensiva de carrera de .271/.316/.439 con 104 jonrones y 476 carreras impulsadas en 847 juegos, con una destacada temporada en 2005 de 28 jonrones y 117 impulsadas. Más tarde jugó en la liga KBO con los Doosan Bears y disfrutó de una carrera profesional de más de 20 años. Jorge se une a Forward Motion Project México como Embajador en México, donde liderará nuestros esfuerzos de expansión para llevar herramientas gratuitas de desarrollo atlético con IA a los jóvenes atletas de todo México." data-en="Jorge Cantú is an American-born Mexican former professional baseball infielder who spent eight years in Major League Baseball (2004–2011), playing for the Tampa Bay Rays, Cincinnati Reds, Florida Marlins, Texas Rangers, and San Diego Padres. Born in McAllen, Texas and raised in Reynosa, Tamaulipas, Mexico, Jorge brings deep roots on both sides of the border. He posted a career batting line of .271/.316/.439 with 104 home runs and 476 RBI in 847 games, with a breakout 2005 season of 28 home runs and 117 RBI. He later played in the KBO League for the Doosan Bears and enjoyed a professional career spanning over 20 years. Jorge joins Forward Motion Project México as Ambassador to Mexico, where he will lead our expansion efforts to bring free AI athletic development tools to youth athletes throughout Mexico.">Jorge Cantú es un infielder mexicano nacido en Estados Unidos, ex jugador profesional de béisbol que pasó ocho años en las Grandes Ligas (2004–2011), jugando para los Tampa Bay Rays, Cincinnati Reds, Florida Marlins, Texas Rangers y San Diego Padres. Nacido en McAllen, Texas y criado en Reynosa, Tamaulipas, México, Jorge tiene raíces profundas a ambos lados de la frontera. Registró una línea ofensiva de carrera de .271/.316/.439 con 104 jonrones y 476 carreras impulsadas en 847 juegos, con una destacada temporada en 2005 de 28 jonrones y 117 impulsadas. Más tarde jugó en la liga KBO con los Doosan Bears y disfrutó de una carrera profesional de más de 20 años. Jorge se une a Forward Motion Project México como Embajador en México, donde liderará nuestros esfuerzos de expansión para llevar herramientas gratuitas de desarrollo atlético con IA a los jóvenes atletas de todo México.</p>
+        </div>
       </article>
     </div>
 
     <div class="advisor-section">
-      <div class="advisor-section-mark">Advisory Board</div>
+      <div class="advisor-section-mark" data-es="Cofundadores" data-en="Co-Founders">Cofundadores</div>
+      <div class="founders">
+        <article class="founder kevin">
+          <div class="founder-name">Kevin Barr</div>
+          <div class="founder-title" data-es="Cofundador y Director de Desarrollo Atlético" data-en="Co-Founder &amp; Athletic Development Director">Cofundador y Director de Desarrollo Atlético</div>
+          <p class="founder-bio" data-es="Kevin Barr pasó casi 30 años trabajando con jugadores de las Grandes Ligas desde 1993, diseñando los programas de entrenamiento y desarrollo físico que mantienen a los atletas de élite rindiendo al más alto nivel. Trabajó con los Florida Marlins, Kansas City Royals, Cincinnati Reds y pasó 14 años con los Tampa Bay Rays. En 2008, sus colegas lo eligieron Entrenador del Año de las Grandes Ligas. Kevin ha dado seguimiento personalmente a más de 12,000 jóvenes atletas, construyendo uno de los conjuntos de datos de desarrollo atlético más completos del país. También fue consultor de Los Angeles Dodgers." data-en="Kevin Barr spent almost 30 years working with Major League Baseball players starting in 1993 — designing the training and physical development programs that keep elite athletes performing at the highest level. He worked with the Florida Marlins, Kansas City Royals, Cincinnati Reds, and spent 14 years with the Tampa Bay Rays. In 2008, he was voted MLB Coach of the Year by his peers. Kevin has personally tracked over 12,000 youth athletes, building one of the most comprehensive athletic development datasets in the country. He also consulted for the Los Angeles Dodgers.">Kevin Barr pasó casi 30 años trabajando con jugadores de las Grandes Ligas desde 1993, diseñando los programas de entrenamiento y desarrollo físico que mantienen a los atletas de élite rindiendo al más alto nivel. Trabajó con los Florida Marlins, Kansas City Royals, Cincinnati Reds y pasó 14 años con los Tampa Bay Rays. En 2008, sus colegas lo eligieron Entrenador del Año de las Grandes Ligas. Kevin ha dado seguimiento personalmente a más de 12,000 jóvenes atletas, construyendo uno de los conjuntos de datos de desarrollo atlético más completos del país. También fue consultor de Los Angeles Dodgers.</p>
+        </article>
+        <article class="founder rich">
+          <div class="founder-name">Rich Rubel</div>
+          <div class="founder-title" data-es="Cofundador y Director Técnico" data-en="Co-Founder &amp; Technical Director">Cofundador y Director Técnico</div>
+          <p class="founder-bio" data-es="Rich Rubel es ex jugador de béisbol de la División I en la Universidad de Connecticut. Ha sido entrenador en South Lake Tahoe High School, entrenador de bateo en Colorado School of Mines y propietario de una instalación de entrenamiento de primer nivel en Las Vegas. Con una licenciatura en Tecnologías de la Información, Rich fundó SwingCheck AI y PredictWell Health AI, la base tecnológica que impulsa la misión de Forward Motion Project México en todo el mundo." data-en="Rich Rubel is a former Division I baseball player at the University of Connecticut. He has coached at South Lake Tahoe High School, served as hitting coach at Colorado School of Mines, and owned a premier training facility in Las Vegas. With a B.S. in Information Technology, Rich founded SwingCheck AI and PredictWell Health AI — the technology backbone powering Forward Motion Project México's mission worldwide.">Rich Rubel es ex jugador de béisbol de la División I en la Universidad de Connecticut. Ha sido entrenador en South Lake Tahoe High School, entrenador de bateo en Colorado School of Mines y propietario de una instalación de entrenamiento de primer nivel en Las Vegas. Con una licenciatura en Tecnologías de la Información, Rich fundó SwingCheck AI y PredictWell Health AI, la base tecnológica que impulsa la misión de Forward Motion Project México en todo el mundo.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="advisor-section">
+      <div class="advisor-section-mark" data-es="Consejo Asesor" data-en="Advisory Board">Consejo Asesor</div>
       <article class="advisor jonny">
         <div class="advisor-photo" aria-label="Jonny Gomes"></div>
         <div class="advisor-content">
           <div class="advisor-name">Jonny Gomes</div>
-          <div class="advisor-title">Advisory Board Member</div>
-          <div class="advisor-subtitle">2× World Series Champion · 13-Year MLB Veteran</div>
-          <p class="advisor-bio">Jonny Gomes is a 13-year MLB veteran and two-time World Series Champion. Drafted in the 18th round by the Tampa Bay Devil Rays in 2001, he was named Minor League Player of the Year and won a Triple-A Championship in 2003 before making his MLB debut that September. The accolades kept coming — a 2004 Arizona Fall League Championship, then Winter Ball Player of the Year and a Caribbean World Series title in 2004/05. He went on to championship runs with the 2008 Tampa Bay Rays (American League Champions), 2010 Cincinnati Reds (NL Central Champions), 2012 Oakland A's (AL West Champions), and the 2014 Oakland A's Wild Card team — earning World Series rings with the 2013 Boston Red Sox, where he hit the go-ahead three-run home run in Game 4, and the 2015 Kansas City Royals. He also played professionally in Japan. Today, Jonny serves as the Arizona Diamondbacks' Minor League Outfield &amp; Baserunning Coordinator, has built a broadcasting career, partners with leading baseball data and ball-tracking companies, and is co-founder of Indie Pro, a full-service baseball advising and agency.</p>
+          <div class="advisor-title" data-es="Miembro del Consejo Asesor" data-en="Advisory Board Member">Miembro del Consejo Asesor</div>
+          <div class="advisor-subtitle" data-es="Bicampeón de la Serie Mundial · Veterano de 13 Años en las Grandes Ligas" data-en="2× World Series Champion · 13-Year MLB Veteran">Bicampeón de la Serie Mundial · Veterano de 13 Años en las Grandes Ligas</div>
+          <p class="advisor-bio" data-es="Jonny Gomes es un veterano de 13 años en las Grandes Ligas y bicampeón de la Serie Mundial. Seleccionado en la 18ª ronda por los Tampa Bay Devil Rays en 2001, fue nombrado Jugador del Año de las Ligas Menores y ganó un campeonato de Triple-A en 2003 antes de debutar en las Grandes Ligas ese septiembre. Los reconocimientos siguieron llegando: un campeonato de la Arizona Fall League en 2004, luego Jugador del Año de la Liga Invernal y un título de la Serie del Caribe en 2004/05. Tuvo recorridos de campeonato con los Tampa Bay Rays de 2008 (Campeones de la Liga Americana), los Cincinnati Reds de 2010 (Campeones de la División Central de la Liga Nacional), los Oakland A's de 2012 (Campeones de la División Oeste de la Liga Americana) y el equipo comodín de los Oakland A's de 2014, ganando anillos de Serie Mundial con los Boston Red Sox de 2013, donde conectó el jonrón de tres carreras que puso a su equipo al frente en el Juego 4, y con los Kansas City Royals de 2015. También jugó profesionalmente en Japón. Hoy, Jonny se desempeña como Coordinador de Jardineros y Corrido de Bases de Ligas Menores de los Arizona Diamondbacks, ha desarrollado una carrera en la transmisión deportiva, colabora con empresas líderes en datos de béisbol y rastreo de la pelota, y es cofundador de Indie Pro, una agencia y firma integral de asesoría de béisbol." data-en="Jonny Gomes is a 13-year MLB veteran and two-time World Series Champion. Drafted in the 18th round by the Tampa Bay Devil Rays in 2001, he was named Minor League Player of the Year and won a Triple-A Championship in 2003 before making his MLB debut that September. The accolades kept coming — a 2004 Arizona Fall League Championship, then Winter Ball Player of the Year and a Caribbean World Series title in 2004/05. He went on to championship runs with the 2008 Tampa Bay Rays (American League Champions), 2010 Cincinnati Reds (NL Central Champions), 2012 Oakland A's (AL West Champions), and the 2014 Oakland A's Wild Card team — earning World Series rings with the 2013 Boston Red Sox, where he hit the go-ahead three-run home run in Game 4, and the 2015 Kansas City Royals. He also played professionally in Japan. Today, Jonny serves as the Arizona Diamondbacks' Minor League Outfield &amp; Baserunning Coordinator, has built a broadcasting career, partners with leading baseball data and ball-tracking companies, and is co-founder of Indie Pro, a full-service baseball advising and agency.">Jonny Gomes es un veterano de 13 años en las Grandes Ligas y bicampeón de la Serie Mundial. Seleccionado en la 18ª ronda por los Tampa Bay Devil Rays en 2001, fue nombrado Jugador del Año de las Ligas Menores y ganó un campeonato de Triple-A en 2003 antes de debutar en las Grandes Ligas ese septiembre. Los reconocimientos siguieron llegando: un campeonato de la Arizona Fall League en 2004, luego Jugador del Año de la Liga Invernal y un título de la Serie del Caribe en 2004/05. Tuvo recorridos de campeonato con los Tampa Bay Rays de 2008 (Campeones de la Liga Americana), los Cincinnati Reds de 2010 (Campeones de la División Central de la Liga Nacional), los Oakland A's de 2012 (Campeones de la División Oeste de la Liga Americana) y el equipo comodín de los Oakland A's de 2014, ganando anillos de Serie Mundial con los Boston Red Sox de 2013, donde conectó el jonrón de tres carreras que puso a su equipo al frente en el Juego 4, y con los Kansas City Royals de 2015. También jugó profesionalmente en Japón. Hoy, Jonny se desempeña como Coordinador de Jardineros y Corrido de Bases de Ligas Menores de los Arizona Diamondbacks, ha desarrollado una carrera en la transmisión deportiva, colabora con empresas líderes en datos de béisbol y rastreo de la pelota, y es cofundador de Indie Pro, una agencia y firma integral de asesoría de béisbol.</p>
         </div>
       </article>
       <article class="advisor damon" style="margin-top:16px;">
         <div class="advisor-photo" style="background-image: url('images/johnny-damon.jpg');" aria-label="Johnny Damon"></div>
         <div class="advisor-content">
           <div class="advisor-name">Johnny Damon</div>
-          <div class="advisor-title">Advisory Board Member</div>
-          <div class="advisor-subtitle">2× World Series Champion · 18-Year MLB Veteran</div>
-          <p class="advisor-bio">Johnny Damon is an 18-year MLB veteran and two-time World Series Champion. A Kansas native, he made his Major League debut in 1995 with the Royals, beginning a career that spanned the Royals, A's, Red Sox, Yankees, Tigers, Rays, and Indians. Damon is most famous for helping lead Boston to that franchise's first world championship in 86 years in 2004, and he played a pivotal role in the Yankees' 2009 World Series triumph. He finished his career with over 2,769 hits — 54th on the all-time MLB list — a .284 average, and 408 stolen bases. A lifelong athlete and founder of A-GAME Beverages, Johnny brings his championship experience and passion for player development to the Forward Motion Project Advisory Board.</p>
-        </div>
-      </article>
-    </div>
-
-    <div class="advisor-section">
-      <div class="advisor-section-mark">Ambassador to Mexico</div>
-      <article class="advisor jorge">
-        <img class="advisor-photo-img" src="images/Jorge_Cantu.png" alt="Jorge Cantú">
-        <div class="advisor-content">
-          <div class="advisor-name">Jorge Cantú</div>
-          <div class="advisor-title">Ambassador to Mexico &amp; Board Member</div>
-          <p class="advisor-bio">Jorge Cantú is an American-born Mexican former professional baseball infielder who spent eight years in Major League Baseball (2004–2011), playing for the Tampa Bay Rays, Cincinnati Reds, Florida Marlins, Texas Rangers, and San Diego Padres. Born in McAllen, Texas and raised in Reynosa, Tamaulipas, Mexico, Jorge brings deep roots on both sides of the border. He posted a career batting line of .271/.316/.439 with 104 home runs and 476 RBI in 847 games, with a breakout 2005 season of 28 home runs and 117 RBI. He later played in the KBO League for the Doosan Bears and enjoyed a professional career spanning over 20 years. Jorge joins Forward Motion USA as Ambassador to Mexico, where he will lead our expansion efforts to bring free AI athletic development tools to youth athletes throughout Mexico.</p>
+          <div class="advisor-title" data-es="Miembro del Consejo Asesor" data-en="Advisory Board Member">Miembro del Consejo Asesor</div>
+          <div class="advisor-subtitle" data-es="Bicampeón de la Serie Mundial · Veterano de 18 Años en las Grandes Ligas" data-en="2× World Series Champion · 18-Year MLB Veteran">Bicampeón de la Serie Mundial · Veterano de 18 Años en las Grandes Ligas</div>
+          <p class="advisor-bio" data-es="Johnny Damon es un veterano de 18 años en las Grandes Ligas y bicampeón de la Serie Mundial. Originario de Kansas, debutó en las Grandes Ligas en 1995 con los Royals, comenzando una carrera que abarcó a los Royals, A's, Red Sox, Yankees, Tigers, Rays e Indians. Damon es más conocido por ayudar a llevar a Boston a su primer campeonato mundial en 86 años en 2004, y desempeñó un papel fundamental en el triunfo de los Yankees en la Serie Mundial de 2009. Terminó su carrera con más de 2,769 hits —el puesto 54 en la lista histórica de las Grandes Ligas—, un promedio de .284 y 408 bases robadas. Atleta de toda la vida y fundador de A-GAME Beverages, Johnny aporta su experiencia de campeonato y su pasión por el desarrollo de jugadores al Consejo Asesor de Forward Motion Project México." data-en="Johnny Damon is an 18-year MLB veteran and two-time World Series Champion. A Kansas native, he made his Major League debut in 1995 with the Royals, beginning a career that spanned the Royals, A's, Red Sox, Yankees, Tigers, Rays, and Indians. Damon is most famous for helping lead Boston to that franchise's first world championship in 86 years in 2004, and he played a pivotal role in the Yankees' 2009 World Series triumph. He finished his career with over 2,769 hits — 54th on the all-time MLB list — a .284 average, and 408 stolen bases. A lifelong athlete and founder of A-GAME Beverages, Johnny brings his championship experience and passion for player development to the Forward Motion Project México Advisory Board.">Johnny Damon es un veterano de 18 años en las Grandes Ligas y bicampeón de la Serie Mundial. Originario de Kansas, debutó en las Grandes Ligas en 1995 con los Royals, comenzando una carrera que abarcó a los Royals, A's, Red Sox, Yankees, Tigers, Rays e Indians. Damon es más conocido por ayudar a llevar a Boston a su primer campeonato mundial en 86 años en 2004, y desempeñó un papel fundamental en el triunfo de los Yankees en la Serie Mundial de 2009. Terminó su carrera con más de 2,769 hits —el puesto 54 en la lista histórica de las Grandes Ligas—, un promedio de .284 y 408 bases robadas. Atleta de toda la vida y fundador de A-GAME Beverages, Johnny aporta su experiencia de campeonato y su pasión por el desarrollo de jugadores al Consejo Asesor de Forward Motion Project México.</p>
         </div>
       </article>
     </div>
@@ -344,7 +372,7 @@
 </main>
 
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -360,6 +388,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

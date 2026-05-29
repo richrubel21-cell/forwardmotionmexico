@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Legal — Forward Motion USA</title>
-<meta name="description" content="Forward Motion USA legal information — Florida nonprofit corporation, EIN, and 501(c)(3) status." />
+<title data-es="Legal — Forward Motion Project México" data-en="Legal — Forward Motion Project México">Legal — Forward Motion Project México</title>
+<meta name="description" data-es-content="Información legal de Forward Motion Project México: corporación sin fines de lucro de Florida, EIN y estatus 501(c)(3)." data-en-content="Forward Motion Project México legal information — Florida nonprofit corporation, EIN, and 501(c)(3) status." content="Información legal de Forward Motion Project México: corporación sin fines de lucro de Florida, EIN y estatus 501(c)(3)." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     display: grid; place-items: center; color: var(--paper);
     font-weight: 800; font-size: 11px;
   }
+  .brand-flag {
+    width: 22px; height: auto; border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle; flex: 0 0 auto;
+  }
   .nav-links {
     list-style: none; display: flex; gap: 22px;
     margin-left: auto; margin-right: 18px; align-items: center;
@@ -76,6 +81,23 @@
     cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
 
   /* PAGE HERO */
   .page-hero {
@@ -203,18 +225,20 @@
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html">Who We Are</a></li>
-    <li><a href="partners.html">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html" class="active">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" class="active" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -222,27 +246,27 @@
 
 <main class="page">
   <div class="content-card">
-    <div class="page-mark">Legal &amp; Compliance</div>
-    <h1 class="page-headline">Legal Information</h1>
+    <div class="page-mark" data-es="Legal y Cumplimiento" data-en="Legal &amp; Compliance">Legal y Cumplimiento</div>
+    <h1 class="page-headline" data-es="Información Legal" data-en="Legal Information">Información Legal</h1>
 
     <div class="legal-grid">
-    <div class="legal-row"><span class="legal-key">Organization Name</span><span class="legal-val">Forward Motion Project, Inc.</span></div>
-    <div class="legal-row"><span class="legal-key">Legal Structure</span><span class="legal-val">Florida Nonprofit Corporation</span></div>
-    <div class="legal-row"><span class="legal-key">Document Number</span><span class="legal-val">N26000005642</span></div>
-    <div class="legal-row"><span class="legal-key">Effective Date</span><span class="legal-val">April 17, 2026</span></div>
-    <div class="legal-row"><span class="legal-key">EIN</span><span class="legal-val">42-1998712</span></div>
-    <div class="legal-row"><span class="legal-key">501(c)(3) Status</span><span class="legal-val">Approved — Effective April 17, 2026</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="Nombre de la Organización" data-en="Organization Name">Nombre de la Organización</span><span class="legal-val">Forward Motion Project, Inc.</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="Estructura Legal" data-en="Legal Structure">Estructura Legal</span><span class="legal-val">Florida Nonprofit Corporation</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="Número de Documento" data-en="Document Number">Número de Documento</span><span class="legal-val">N26000005642</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="Fecha de Vigencia" data-en="Effective Date">Fecha de Vigencia</span><span class="legal-val">April 17, 2026</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="EIN" data-en="EIN">EIN</span><span class="legal-val">42-1998712</span></div>
+    <div class="legal-row"><span class="legal-key" data-es="Estatus 501(c)(3)" data-en="501(c)(3) Status">Estatus 501(c)(3)</span><span class="legal-val">Approved — Effective April 17, 2026</span></div>
   </div>
 
-  <h2 class="legal-section-title">Mission Statement</h2>
-  <p class="legal-mission">Forward Motion Project exists to provide free, AI-powered athletic development tools to youth athletes worldwide — connecting young players with coaches and creating accurate, comparable athletic data so every athlete can be measured against the same standard, regardless of resources.</p>
+  <h2 class="legal-section-title" data-es="Declaración de Misión" data-en="Mission Statement">Declaración de Misión</h2>
+  <p class="legal-mission" data-es="Forward Motion Project México existe para ofrecer herramientas gratuitas de desarrollo atlético impulsadas por IA a jóvenes atletas de todo el mundo, conectando a los jugadores con entrenadores y creando datos atléticos precisos y comparables para que cada atleta pueda medirse con el mismo estándar, sin importar sus recursos." data-en="Forward Motion Project México exists to provide free, AI-powered athletic development tools to youth athletes worldwide — connecting young players with coaches and creating accurate, comparable athletic data so every athlete can be measured against the same standard, regardless of resources.">Forward Motion Project México existe para ofrecer herramientas gratuitas de desarrollo atlético impulsadas por IA a jóvenes atletas de todo el mundo, conectando a los jugadores con entrenadores y creando datos atléticos precisos y comparables para que cada atleta pueda medirse con el mismo estándar, sin importar sus recursos.</p>
 
-    <p class="page-note">Contact: <a href="mailto:rich.rubel@forwardmotionusa.org">rich.rubel@forwardmotionusa.org</a> · <a href="mailto:kevin.barr@forwardmotionusa.org">kevin.barr@forwardmotionusa.org</a></p>
+    <p class="page-note"><span data-es="Contacto:" data-en="Contact:">Contacto:</span> <a href="mailto:rich.rubel@forwardmotionusa.org">rich.rubel@forwardmotionusa.org</a> · <a href="mailto:kevin.barr@forwardmotionusa.org">kevin.barr@forwardmotionusa.org</a></p>
   </div>
 </main>
 
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -258,6 +282,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

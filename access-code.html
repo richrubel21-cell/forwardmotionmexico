@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Free Access Code — Forward Motion USA</title>
-<meta name="description" content="Forward Motion USA is currently accepting donations to begin distributing free access codes to youth athletes. Coming soon." />
+<title data-es="Código de Acceso Gratis — Forward Motion Project México" data-en="Free Access Code — Forward Motion Project México">Código de Acceso Gratis — Forward Motion Project México</title>
+<meta name="description" data-es-content="Forward Motion Project México está aceptando donaciones para comenzar a distribuir códigos de acceso gratuitos a jóvenes atletas. Próximamente." data-en-content="Forward Motion Project México is currently accepting donations to begin distributing free access codes to youth athletes. Coming soon." content="Forward Motion Project México está aceptando donaciones para comenzar a distribuir códigos de acceso gratuitos a jóvenes atletas. Próximamente." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     display: grid; place-items: center; color: var(--paper);
     font-weight: 800; font-size: 11px;
   }
+  .brand-flag {
+    width: 22px; height: auto; border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle; flex: 0 0 auto;
+  }
   .nav-links {
     list-style: none; display: flex; gap: 22px;
     margin-left: auto; margin-right: 18px; align-items: center;
@@ -76,6 +81,23 @@
     cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
 
   /* PAGE HERO */
   .page-hero {
@@ -188,24 +210,26 @@
 
 <!-- Top partner banner -->
 <a href="https://swingcheckai.com" target="_blank" rel="noopener" style="display:block;background:linear-gradient(90deg,#0b1f3a,#15294a,#0b1f3a);color:#f4c769;text-align:center;padding:9px 16px;font-size:13px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-bottom:1px solid rgba(244,199,105,0.35);position:relative;z-index:6;">
-  Try the AI Tools &middot; Visit SwingCheck AI &rarr;
+  <span data-es="Prueba las Herramientas de IA · Visita SwingCheck AI →" data-en="Try the AI Tools · Visit SwingCheck AI →">Prueba las Herramientas de IA &middot; Visita SwingCheck AI &rarr;</span>
 </a>
 
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html">Who We Are</a></li>
-    <li><a href="partners.html">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -213,19 +237,19 @@
 
 <main class="page">
   <div class="content-card">
-    <div class="page-mark">Free Access Codes</div>
-    <h1 class="page-headline">Coming Soon</h1>
-    <p class="page-lead">We are currently accepting donations to start distributing free access codes.</p>
-    <p class="page-body">They're coming soon! Your support makes it possible for Forward Motion USA to put professional-grade AI training tools in the hands of every young athlete who needs them — at no cost.</p>
+    <div class="page-mark" data-es="Códigos de Acceso Gratis" data-en="Free Access Codes">Códigos de Acceso Gratis</div>
+    <h1 class="page-headline" data-es="Próximamente" data-en="Coming Soon">Próximamente</h1>
+    <p class="page-lead" data-es="Actualmente estamos aceptando donaciones para comenzar a distribuir códigos de acceso gratuitos." data-en="We are currently accepting donations to start distributing free access codes.">Actualmente estamos aceptando donaciones para comenzar a distribuir códigos de acceso gratuitos.</p>
+    <p class="page-body" data-es="¡Llegarán pronto! Tu apoyo hace posible que Forward Motion Project México ponga herramientas de entrenamiento con IA de nivel profesional en manos de cada joven atleta que las necesite, sin costo alguno." data-en="They're coming soon! Your support makes it possible for Forward Motion Project México to put professional-grade AI training tools in the hands of every young athlete who needs them — at no cost.">¡Llegarán pronto! Tu apoyo hace posible que Forward Motion Project México ponga herramientas de entrenamiento con IA de nivel profesional en manos de cada joven atleta que las necesite, sin costo alguno.</p>
     <div class="ac-cta-row">
-      <a class="ac-btn" href="donate.html">Donate Now</a>
-      <a class="ac-btn ac-btn-ghost" href="index.html">Back to Home</a>
+      <a class="ac-btn" href="donate.html" data-es="Donar Ahora" data-en="Donate Now">Donar Ahora</a>
+      <a class="ac-btn ac-btn-ghost" href="index.html" data-es="Volver al Inicio" data-en="Back to Home">Volver al Inicio</a>
     </div>
   </div>
 </main>
 
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -241,6 +265,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

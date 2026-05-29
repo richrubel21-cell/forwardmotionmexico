@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Partners — Forward Motion USA</title>
-<meta name="description" content="The technology partners powering Forward Motion USA — SwingCheck AI and Physis." />
+<title data-es="Aliados — Forward Motion Project México" data-en="Partners — Forward Motion Project México">Aliados — Forward Motion Project México</title>
+<meta name="description" data-es-content="Los aliados tecnológicos que impulsan Forward Motion Project México: SwingCheck AI y Physis." data-en-content="The technology partners powering Forward Motion Project México — SwingCheck AI and Physis." content="Los aliados tecnológicos que impulsan Forward Motion Project México: SwingCheck AI y Physis." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     display: grid; place-items: center; color: var(--paper);
     font-weight: 800; font-size: 11px;
   }
+  .brand-flag {
+    width: 22px; height: auto; border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle; flex: 0 0 auto;
+  }
   .nav-links {
     list-style: none; display: flex; gap: 22px;
     margin-left: auto; margin-right: 18px; align-items: center;
@@ -76,6 +81,23 @@
     cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
 
   /* PAGE HERO */
   .page-hero {
@@ -224,18 +246,20 @@
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html">Who We Are</a></li>
-    <li><a href="partners.html" class="active">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" class="active" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -243,28 +267,28 @@
 
 <main class="page">
   <div class="content-card">
-    <div class="page-mark">Our Partners</div>
-    <h1 class="page-headline">Built With the Best</h1>
+    <div class="page-mark" data-es="Nuestros Aliados" data-en="Our Partners">Nuestros Aliados</div>
+    <h1 class="page-headline" data-es="Construido con los Mejores" data-en="Built With the Best">Construido con los Mejores</h1>
     <div class="partners">
       <a class="partner swingcheck" href="https://swingcheckai.com" target="_blank" rel="noopener">
         <h3>SwingCheck AI</h3>
         <div class="partner-url">swingcheckai.com</div>
-        <p class="partner-desc">Provides the AI swing and throw analysis and athletic performance scoring engine used across every Forward Motion USA program. Free access for our youth athletes.</p>
-        <span class="partner-link">Visit SwingCheck →</span>
+        <p class="partner-desc" data-es="Proporciona el motor de análisis de swing y lanzamiento con IA y de evaluación del rendimiento atlético que se utiliza en todos los programas de Forward Motion Project México. Acceso gratuito para nuestros jóvenes atletas." data-en="Provides the AI swing and throw analysis and athletic performance scoring engine used across every Forward Motion Project México program. Free access for our youth athletes.">Proporciona el motor de análisis de swing y lanzamiento con IA y de evaluación del rendimiento atlético que se utiliza en todos los programas de Forward Motion Project México. Acceso gratuito para nuestros jóvenes atletas.</p>
+        <span class="partner-link" data-es="Visitar SwingCheck →" data-en="Visit SwingCheck →">Visitar SwingCheck →</span>
       </a>
       <a class="partner physis" href="https://myphysis.ai" target="_blank" rel="noopener">
         <h3>Physis AI</h3>
         <div class="partner-url">myphysis.ai</div>
-        <p class="partner-desc">Chapters — the AI photo album that learns each athlete's journey and turns a season's worth of moments into a story they can keep. Provided to families at no cost. Brought to you by Physis AI.</p>
-        <span class="partner-link">Visit Physis →</span>
+        <p class="partner-desc" data-es="Chapters: el álbum de fotos con IA que aprende la trayectoria de cada atleta y convierte los momentos de toda una temporada en una historia que pueden conservar. Se ofrece a las familias sin costo alguno. Presentado por Physis AI." data-en="Chapters — the AI photo album that learns each athlete's journey and turns a season's worth of moments into a story they can keep. Provided to families at no cost. Brought to you by Physis AI.">Chapters: el álbum de fotos con IA que aprende la trayectoria de cada atleta y convierte los momentos de toda una temporada en una historia que pueden conservar. Se ofrece a las familias sin costo alguno. Presentado por Physis AI.</p>
+        <span class="partner-link" data-es="Visitar Physis →" data-en="Visit Physis →">Visitar Physis →</span>
       </a>
     </div>
-    <p class="partners-note">Partnership inquiries: <a href="mailto:rich.rubel@forwardmotionusa.org">rich.rubel@forwardmotionusa.org</a> · <a href="mailto:kevin.barr@forwardmotionusa.org">kevin.barr@forwardmotionusa.org</a></p>
+    <p class="partners-note"><span data-es="Consultas de alianzas:" data-en="Partnership inquiries:">Consultas de alianzas:</span> <a href="mailto:rich.rubel@forwardmotionusa.org">rich.rubel@forwardmotionusa.org</a> · <a href="mailto:kevin.barr@forwardmotionusa.org">kevin.barr@forwardmotionusa.org</a></p>
   </div>
 </main>
 
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -280,6 +304,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

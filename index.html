@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Forward Motion USA</title>
-<meta name="description" content="Forward Motion USA is a 501(c)(3) nonprofit getting real coaching tools into the hands of young athletes who'd never otherwise see them." />
+<title data-es="Forward Motion Project México" data-en="Forward Motion Project México">Forward Motion Project México</title>
+<meta name="description" data-es-content="Forward Motion Project México es una organización sin fines de lucro 501(c)(3) que pone verdaderas herramientas de entrenamiento en manos de jóvenes atletas que de otra forma nunca las tendrían." data-en-content="Forward Motion Project México is a 501(c)(3) nonprofit getting real coaching tools into the hands of young athletes who'd never otherwise see them." content="Forward Motion Project México es una organización sin fines de lucro 501(c)(3) que pone verdaderas herramientas de entrenamiento en manos de jóvenes atletas que de otra forma nunca las tendrían." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -79,6 +79,14 @@
     font-weight: 800;
     font-size: 11px;
   }
+  .brand-flag {
+    width: 22px;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle;
+    flex: 0 0 auto;
+  }
   .badge-501c3 {
     font-size: 10px;
     font-weight: 700;
@@ -134,6 +142,28 @@
     line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
+
+  /* Rich-text language switch (for markup that can't use textContent swap).
+     Driven by the <html lang> attribute that assets/lang.js sets. */
+  html[lang="es"] .lang-en { display: none; }
+  html[lang="en"] .lang-es { display: none; }
 
   /* =================== HERO (image background) =================== */
   .hero {
@@ -506,18 +536,20 @@
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html">About</a></li>
-    <li><a href="team.html">Who We Are</a></li>
-    <li><a href="partners.html">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -525,11 +557,11 @@
 <section class="hero">
   <div class="hero-inner">
     <h1 class="headline">
-      <span class="accent">AI</span> Built for the <span class="accent">Athlete</span><br>in Every Player.
+      <span class="lang-es"><span class="accent">IA</span> Diseñada para el <span class="accent">Atleta</span><br>que Hay en Cada Jugador.</span><span class="lang-en"><span class="accent">AI</span> Built for the <span class="accent">Athlete</span><br>in Every Player.</span>
     </h1>
-    <p class="subtitle">Compare. Improve. Free AI tools built for young athletes ready to advance to the next level. Forward Motion USA was founded on a straightforward principle — access to elite athletic development tools should not be determined by a family's income.</p>
+    <p class="subtitle" data-es="Compara. Mejora. Herramientas de IA gratuitas creadas para jóvenes atletas listos para avanzar al siguiente nivel. Forward Motion Project México nació de un principio sencillo: el acceso a herramientas de desarrollo atlético de élite no debe depender de los ingresos de una familia." data-en="Compare. Improve. Free AI tools built for young athletes ready to advance to the next level. Forward Motion Project México was founded on a straightforward principle — access to elite athletic development tools should not be determined by a family's income.">Compara. Mejora. Herramientas de IA gratuitas creadas para jóvenes atletas listos para avanzar al siguiente nivel. Forward Motion Project México nació de un principio sencillo: el acceso a herramientas de desarrollo atlético de élite no debe depender de los ingresos de una familia.</p>
     <div class="ctas">
-      <a class="btn btn-primary" href="access-code.html">Get Your Free Access Code</a>
+      <a class="btn btn-primary" href="access-code.html" data-es="Obtén tu Código de Acceso Gratis" data-en="Get Your Free Access Code">Obtén tu Código de Acceso Gratis</a>
     </div>
   </div>
 </section>
@@ -538,27 +570,27 @@
 <section class="announcement-banner">
   <div class="announcement-inner">
     <div class="announcement-top">
-      <span class="announcement-badge">🏆 Announcements</span>
-      <span class="announcement-date">May 2026</span>
+      <span class="announcement-badge" data-es="🏆 Anuncios" data-en="🏆 Announcements">🏆 Anuncios</span>
+      <span class="announcement-date" data-es="Mayo de 2026" data-en="May 2026">Mayo de 2026</span>
     </div>
-    <h2 class="announcement-headline">Forward Motion Project Welcomes 2× World Series Champion Johnny Damon to Advisory Board</h2>
-    <p class="announcement-subtext">We're proud to welcome two-time World Series Champion and 18-year MLB veteran Johnny Damon to the Forward Motion Project Advisory Board. Johnny believes in our mission: giving every young athlete access to the same pro-level development tools — regardless of income, zip code, or country. His experience and passion for player development will help us reach more kids around the world.</p>
+    <h2 class="announcement-headline" data-es="Forward Motion Project México da la bienvenida a Jorge Cantú como Embajador en México" data-en="Forward Motion Project México Welcomes Jorge Cantú as Ambassador to Mexico">Forward Motion Project México da la bienvenida a Jorge Cantú como Embajador en México</h2>
+    <p class="announcement-subtext" data-es="Nos enorgullece anunciar que el ex infielder de las Grandes Ligas Jorge Cantú se ha unido a la junta de Forward Motion Project México como nuestro Embajador oficial en México. Nacido en McAllen, Texas y criado en Reynosa, Tamaulipas, Jorge aporta una conexión extraordinaria con la cultura del béisbol de Estados Unidos y de México. Con una destacada carrera de ocho años en las Grandes Ligas y más de 20 años como jugador profesional, Jorge liderará nuestra misión de llevar herramientas gratuitas de desarrollo atlético con IA a los jóvenes atletas de todo México, garantizando que los ingresos de una familia nunca determinen el potencial de un atleta, a ambos lados de la frontera." data-en="We are proud to announce that former MLB infielder Jorge Cantú has joined the Forward Motion Project México board as our official Ambassador to Mexico. Born in McAllen, Texas and raised in Reynosa, Tamaulipas, Jorge brings an extraordinary connection to both American and Mexican baseball culture. With a distinguished eight-year MLB career and over 20 years as a professional player, Jorge will lead our mission to expand free AI athletic development tools to youth athletes throughout Mexico — ensuring that a family's income never determines an athlete's potential, on either side of the border.">Nos enorgullece anunciar que el ex infielder de las Grandes Ligas Jorge Cantú se ha unido a la junta de Forward Motion Project México como nuestro Embajador oficial en México. Nacido en McAllen, Texas y criado en Reynosa, Tamaulipas, Jorge aporta una conexión extraordinaria con la cultura del béisbol de Estados Unidos y de México. Con una destacada carrera de ocho años en las Grandes Ligas y más de 20 años como jugador profesional, Jorge liderará nuestra misión de llevar herramientas gratuitas de desarrollo atlético con IA a los jóvenes atletas de todo México, garantizando que los ingresos de una familia nunca determinen el potencial de un atleta, a ambos lados de la frontera.</p>
   </div>
   <div class="announcement-inner" style="margin-top:24px;">
     <div class="announcement-top">
-      <span class="announcement-badge">🏆 Announcements</span>
-      <span class="announcement-date">May 2026</span>
+      <span class="announcement-badge" data-es="🏆 Anuncios" data-en="🏆 Announcements">🏆 Anuncios</span>
+      <span class="announcement-date" data-es="Mayo de 2026" data-en="May 2026">Mayo de 2026</span>
     </div>
-    <h2 class="announcement-headline">Forward Motion USA Welcomes 2× World Series Champion Jonny Gomes to Advisory Board</h2>
-    <p class="announcement-subtext">13-year MLB veteran, two-time World Series Champion, and youth development leader Jonny Gomes has joined the Forward Motion USA Advisory Board.</p>
+    <h2 class="announcement-headline" data-es="Forward Motion Project México da la bienvenida al bicampeón de la Serie Mundial Johnny Damon a su Consejo Asesor" data-en="Forward Motion Project México Welcomes 2× World Series Champion Johnny Damon to Advisory Board">Forward Motion Project México da la bienvenida al bicampeón de la Serie Mundial Johnny Damon a su Consejo Asesor</h2>
+    <p class="announcement-subtext" data-es="Nos enorgullece dar la bienvenida al bicampeón de la Serie Mundial y veterano de 18 años en las Grandes Ligas, Johnny Damon, al Consejo Asesor de Forward Motion Project México. Johnny cree en nuestra misión: dar a cada joven atleta acceso a las mismas herramientas de desarrollo de nivel profesional, sin importar sus ingresos, su código postal o su país. Su experiencia y su pasión por el desarrollo de jugadores nos ayudarán a llegar a más niños en todo el mundo." data-en="We're proud to welcome two-time World Series Champion and 18-year MLB veteran Johnny Damon to the Forward Motion Project México Advisory Board. Johnny believes in our mission: giving every young athlete access to the same pro-level development tools — regardless of income, zip code, or country. His experience and passion for player development will help us reach more kids around the world.">Nos enorgullece dar la bienvenida al bicampeón de la Serie Mundial y veterano de 18 años en las Grandes Ligas, Johnny Damon, al Consejo Asesor de Forward Motion Project México. Johnny cree en nuestra misión: dar a cada joven atleta acceso a las mismas herramientas de desarrollo de nivel profesional, sin importar sus ingresos, su código postal o su país. Su experiencia y su pasión por el desarrollo de jugadores nos ayudarán a llegar a más niños en todo el mundo.</p>
   </div>
   <div class="announcement-inner" style="margin-top:24px;">
     <div class="announcement-top">
-      <span class="announcement-badge">🏆 Announcements</span>
-      <span class="announcement-date">May 2026</span>
+      <span class="announcement-badge" data-es="🏆 Anuncios" data-en="🏆 Announcements">🏆 Anuncios</span>
+      <span class="announcement-date" data-es="Mayo de 2026" data-en="May 2026">Mayo de 2026</span>
     </div>
-    <h2 class="announcement-headline">Forward Motion Project Welcomes Jorge Cantú as Ambassador to Mexico</h2>
-    <p class="announcement-subtext">We are proud to announce that former MLB infielder Jorge Cantú has joined the Forward Motion USA board as our official Ambassador to Mexico. Born in McAllen, Texas and raised in Reynosa, Tamaulipas, Jorge brings an extraordinary connection to both American and Mexican baseball culture. With a distinguished eight-year MLB career and over 20 years as a professional player, Jorge will lead our mission to expand free AI athletic development tools to youth athletes throughout Mexico — ensuring that a family's income never determines an athlete's potential, on either side of the border.</p>
+    <h2 class="announcement-headline" data-es="Forward Motion Project México da la bienvenida al bicampeón de la Serie Mundial Jonny Gomes a su Consejo Asesor" data-en="Forward Motion Project México Welcomes 2× World Series Champion Jonny Gomes to Advisory Board">Forward Motion Project México da la bienvenida al bicampeón de la Serie Mundial Jonny Gomes a su Consejo Asesor</h2>
+    <p class="announcement-subtext" data-es="Jonny Gomes, veterano de 13 años en las Grandes Ligas, bicampeón de la Serie Mundial y líder en el desarrollo juvenil, se ha unido al Consejo Asesor de Forward Motion Project México." data-en="13-year MLB veteran, two-time World Series Champion, and youth development leader Jonny Gomes has joined the Forward Motion Project México Advisory Board.">Jonny Gomes, veterano de 13 años en las Grandes Ligas, bicampeón de la Serie Mundial y líder en el desarrollo juvenil, se ha unido al Consejo Asesor de Forward Motion Project México.</p>
   </div>
 </section>
 
@@ -567,65 +599,65 @@
   <div class="cards">
     <a class="card card-baseball" href="https://swingcheckai.com/baseball" target="_blank" rel="noopener">
       <div class="card-emoji">⚾</div>
-      <div class="card-name">Baseball</div>
-      <p class="card-desc" style="color:#000;">Baseball Swing &amp; Throw &amp; Jump Analysis</p>
-      <span class="card-link">Open</span>
+      <div class="card-name" data-es="Béisbol" data-en="Baseball">Béisbol</div>
+      <p class="card-desc" style="color:#000;" data-es="Análisis de Swing, Lanzamiento y Salto de Béisbol" data-en="Baseball Swing &amp; Throw &amp; Jump Analysis">Análisis de Swing, Lanzamiento y Salto de Béisbol</p>
+      <span class="card-link" data-es="Abrir" data-en="Open">Abrir</span>
     </a>
     <a class="card card-softball" href="https://swingcheckai.com/softball" target="_blank" rel="noopener">
       <div class="card-emoji">🥎</div>
-      <div class="card-name">Softball</div>
-      <p class="card-desc" style="color:#000;">Softball Swing &amp; Throw &amp; Jump Analysis</p>
-      <span class="card-link">Open</span>
+      <div class="card-name" data-es="Softbol" data-en="Softball">Softbol</div>
+      <p class="card-desc" style="color:#000;" data-es="Análisis de Swing, Lanzamiento y Salto de Softbol" data-en="Softball Swing &amp; Throw &amp; Jump Analysis">Análisis de Swing, Lanzamiento y Salto de Softbol</p>
+      <span class="card-link" data-es="Abrir" data-en="Open">Abrir</span>
     </a>
     <a class="card card-perf" href="https://swingcheckai.com/ap_preview.html" target="_blank" rel="noopener">
       <div class="card-emoji">⚡</div>
-      <div class="card-name">Performance</div>
-      <p class="card-desc">Sprint, jump, move better.</p>
-      <span class="card-link">Open</span>
+      <div class="card-name" data-es="Rendimiento" data-en="Performance">Rendimiento</div>
+      <p class="card-desc" data-es="Corre, salta y muévete mejor." data-en="Sprint, jump, move better.">Corre, salta y muévete mejor.</p>
+      <span class="card-link" data-es="Abrir" data-en="Open">Abrir</span>
     </a>
     <a class="card card-chapters" href="https://myphysis.ai" target="_blank" rel="noopener">
       <div class="card-emoji">📸</div>
-      <div class="card-name">Chapters</div>
-      <p class="card-desc">Your AI Photo Album.</p>
-      <span class="card-link">Open</span>
+      <div class="card-name" data-es="Chapters" data-en="Chapters">Chapters</div>
+      <p class="card-desc" data-es="Tu álbum de fotos con IA." data-en="Your AI Photo Album.">Tu álbum de fotos con IA.</p>
+      <span class="card-link" data-es="Abrir" data-en="Open">Abrir</span>
     </a>
   </div>
 </section>
 
 <!-- =================== IMPACT BAR =================== -->
 <section class="impact" id="mission">
-  Compare Yourself to Data From <strong>12,000+</strong> Athletes
+  <span data-es="Compárate con Datos de" data-en="Compare Yourself to Data From">Compárate con Datos de</span> <strong>12,000+</strong> <span data-es="Atletas" data-en="Athletes">Atletas</span>
   <span class="dot"></span>
-  Multi-Sport
+  <span data-es="Multideporte" data-en="Multi-Sport">Multideporte</span>
   <span class="dot"></span>
-  Athletic Performance
+  <span data-es="Rendimiento Atlético" data-en="Athletic Performance">Rendimiento Atlético</span>
   <span class="dot"></span>
-  International
+  <span data-es="Internacional" data-en="International">Internacional</span>
   <span class="dot"></span>
-  One Mission
+  <span data-es="Una Misión" data-en="One Mission">Una Misión</span>
 </section>
 
 <!-- =================== WHY =================== -->
 <section class="why">
   <div class="why-inner">
     <div class="why-row">
-      <div class="why-label label-who">Who</div>
-      <div class="why-line">Youth Athletes Ready to Train Smarter and Prepare to Compete in College.</div>
+      <div class="why-label label-who" data-es="Quién" data-en="Who">Quién</div>
+      <div class="why-line" data-es="Jóvenes atletas listos para entrenar de forma más inteligente y prepararse para competir en la universidad." data-en="Youth Athletes Ready to Train Smarter and Prepare to Compete in College.">Jóvenes atletas listos para entrenar de forma más inteligente y prepararse para competir en la universidad.</div>
     </div>
     <div class="why-row">
-      <div class="why-label label-what">What</div>
-      <div class="why-line">Free AI tools — AI-powered swing and throw analysis and athletic performance training with a proprietary dataset, each with a personal AI coach guiding every step, plus Chapters, the AI photo album that captures your story.</div>
+      <div class="why-label label-what" data-es="Qué" data-en="What">Qué</div>
+      <div class="why-line" data-es="Herramientas de IA gratuitas: análisis de swing y lanzamiento con IA y entrenamiento de rendimiento atlético con un conjunto de datos propio, cada uno con un entrenador de IA personal que te guía en cada paso, además de Chapters, el álbum de fotos con IA que captura tu historia." data-en="Free AI tools — AI-powered swing and throw analysis and athletic performance training with a proprietary dataset, each with a personal AI coach guiding every step, plus Chapters, the AI photo album that captures your story.">Herramientas de IA gratuitas: análisis de swing y lanzamiento con IA y entrenamiento de rendimiento atlético con un conjunto de datos propio, cada uno con un entrenador de IA personal que te guía en cada paso, además de Chapters, el álbum de fotos con IA que captura tu historia.</div>
     </div>
     <div class="why-row">
-      <div class="why-label label-why">Why</div>
-      <div class="why-line">Talent is everywhere. We offer the tools for success that were previously priced out of reach.</div>
+      <div class="why-label label-why" data-es="Por Qué" data-en="Why">Por Qué</div>
+      <div class="why-line" data-es="El talento está en todas partes. Ofrecemos las herramientas para el éxito que antes estaban fuera del alcance económico." data-en="Talent is everywhere. We offer the tools for success that were previously priced out of reach.">El talento está en todas partes. Ofrecemos las herramientas para el éxito que antes estaban fuera del alcance económico.</div>
     </div>
   </div>
 </section>
 
 <!-- =================== FOOTER =================== -->
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -641,6 +673,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

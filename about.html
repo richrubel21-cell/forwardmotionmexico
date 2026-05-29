@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>About — Forward Motion USA</title>
-<meta name="description" content="Forward Motion USA was founded to become the first global platform connecting youth athletes and coaches worldwide through accurate, comparable athletic data." />
+<title data-es="Acerca de — Forward Motion Project México" data-en="About — Forward Motion Project México">Acerca de — Forward Motion Project México</title>
+<meta name="description" data-es-content="Forward Motion Project México fue fundada para convertirse en la primera plataforma global que conecta a jóvenes atletas y entrenadores de todo el mundo mediante datos atléticos precisos y comparables." data-en-content="Forward Motion Project México was founded to become the first global platform connecting youth athletes and coaches worldwide through accurate, comparable athletic data." content="Forward Motion Project México fue fundada para convertirse en la primera plataforma global que conecta a jóvenes atletas y entrenadores de todo el mundo mediante datos atléticos precisos y comparables." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -47,6 +47,11 @@
     display: grid; place-items: center; color: var(--paper);
     font-weight: 800; font-size: 11px;
   }
+  .brand-flag {
+    width: 22px; height: auto; border-radius: 3px;
+    box-shadow: 0 0 0 1px rgba(11, 31, 58, 0.15);
+    vertical-align: middle; flex: 0 0 auto;
+  }
   .nav-links {
     list-style: none; display: flex; gap: 22px;
     margin-left: auto; margin-right: 18px; align-items: center;
@@ -76,6 +81,23 @@
     cursor: pointer; padding: 4px 8px; margin-left: 10px; line-height: 1;
   }
   .nav-burger:hover { color: var(--gold); }
+
+  /* Language toggle (ES / EN) */
+  .lang-toggle {
+    background: none;
+    border: 1.5px solid rgba(11, 31, 58, 0.35);
+    color: var(--navy);
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .lang-toggle:hover { color: var(--gold); border-color: var(--gold); }
 
   /* PAGE HERO */
   .page-hero {
@@ -162,18 +184,20 @@
 <nav class="nav">
   <a class="brand" href="index.html">
     <span class="brand-mark">FM</span>
-    Forward Motion USA
+    Forward Motion Project México
+    <img class="brand-flag" src="assets/mx-flag.svg" alt="México" width="22" height="13">
   </a>
   <ul class="nav-links">
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="team.html">Who We Are</a></li>
-    <li><a href="partners.html">Partners</a></li>
-    <li><a href="events.html">Events</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="legal.html">Legal</a></li>
-    <li><a href="donate.html">Donate</a></li>
+    <li><a href="about.html" class="active" data-es="Acerca de" data-en="About">Acerca de</a></li>
+    <li><a href="team.html" data-es="Quiénes Somos" data-en="Who We Are">Quiénes Somos</a></li>
+    <li><a href="partners.html" data-es="Aliados" data-en="Partners">Aliados</a></li>
+    <li><a href="events.html" data-es="Eventos" data-en="Events">Eventos</a></li>
+    <li><a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    <li><a href="legal.html" data-es="Legal" data-en="Legal">Legal</a></li>
+    <li><a href="donate.html" data-es="Donar" data-en="Donate">Donar</a></li>
   </ul>
-  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener">Get Free Access</a>
+  <a class="nav-cta" href="https://swingcheckai.com" target="_blank" rel="noopener" data-es="Acceso Gratis" data-en="Get Free Access">Acceso Gratis</a>
+  <button class="lang-toggle" id="langToggle" type="button" aria-label="Cambiar a español">EN</button>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false">☰</button>
 </nav>
 
@@ -181,16 +205,16 @@
 
 <main class="page">
   <div class="content-card">
-    <div class="page-mark">Our Story</div>
-    <h1 class="page-headline">Why Forward Motion USA Exists</h1>
-    <p class="page-lead" style="font-weight: 400; font-size: clamp(15px, 1.4vw, 17px);">Forward Motion USA was founded on a straightforward principle — access to elite athletic development tools should not be determined by a family's income. For decades, the most advanced performance analysis software, data-driven coaching systems, and athlete benchmarking platforms have carried price tags that put them out of reach for the vast majority of youth athletes. The result is a widening gap between those who can afford to develop their talent and those who cannot. We are here to eliminate that gap entirely.</p>
-    <p class="page-body" style="margin-bottom: 16px; font-weight: 400;">Through partnerships with SwingCheck AI and Physis, we deliver professional-grade AI tools directly to youth athletes at no cost. Players receive biomechanics analysis benchmarked against a proprietary dataset of over 12,000 athletes, performance tracking that evolves with them over time, and an AI-powered photo album that documents and narrates their athletic journey. These are not watered-down free versions — they are the same tools used by programs that produce collegiate and professional athletes, made available to every young player who is willing to put in the work.</p>
-    <p class="page-body" style="font-weight: 400;">Our mission extends beyond the digital platform. Forward Motion USA funds and organizes free scouting events in communities across the country, ensuring that talented athletes have real opportunities to be evaluated by coaches and scouts who can advance their careers. This organization was built by coaches with decades of experience at the highest levels of professional sport — because we have seen firsthand what happens when talent goes undiscovered. We are committed to preventing this from occurring in the future through proactive and sustainable solutions.</p>
+    <div class="page-mark" data-es="Nuestra Historia" data-en="Our Story">Nuestra Historia</div>
+    <h1 class="page-headline" data-es="Por qué existe Forward Motion Project México" data-en="Why Forward Motion Project México Exists">Por qué existe Forward Motion Project México</h1>
+    <p class="page-lead" style="font-weight: 400; font-size: clamp(15px, 1.4vw, 17px);" data-es="Forward Motion Project México nació de un principio sencillo: el acceso a herramientas de desarrollo atlético de élite no debe depender de los ingresos de una familia. Durante décadas, el software de análisis de rendimiento más avanzado, los sistemas de entrenamiento basados en datos y las plataformas de evaluación de atletas han tenido precios que los ponen fuera del alcance de la gran mayoría de los jóvenes atletas. El resultado es una brecha cada vez mayor entre quienes pueden costear el desarrollo de su talento y quienes no. Estamos aquí para eliminar esa brecha por completo." data-en="Forward Motion Project México was founded on a straightforward principle — access to elite athletic development tools should not be determined by a family's income. For decades, the most advanced performance analysis software, data-driven coaching systems, and athlete benchmarking platforms have carried price tags that put them out of reach for the vast majority of youth athletes. The result is a widening gap between those who can afford to develop their talent and those who cannot. We are here to eliminate that gap entirely.">Forward Motion Project México nació de un principio sencillo: el acceso a herramientas de desarrollo atlético de élite no debe depender de los ingresos de una familia. Durante décadas, el software de análisis de rendimiento más avanzado, los sistemas de entrenamiento basados en datos y las plataformas de evaluación de atletas han tenido precios que los ponen fuera del alcance de la gran mayoría de los jóvenes atletas. El resultado es una brecha cada vez mayor entre quienes pueden costear el desarrollo de su talento y quienes no. Estamos aquí para eliminar esa brecha por completo.</p>
+    <p class="page-body" style="margin-bottom: 16px; font-weight: 400;" data-es="A través de alianzas con SwingCheck AI y Physis, llevamos herramientas de IA de nivel profesional directamente a los jóvenes atletas sin costo alguno. Los jugadores reciben análisis biomecánico comparado con un conjunto de datos propio de más de 12,000 atletas, seguimiento de rendimiento que evoluciona con ellos a lo largo del tiempo y un álbum de fotos impulsado por IA que documenta y narra su trayectoria atlética. No son versiones gratuitas simplificadas: son las mismas herramientas que usan los programas que forman atletas universitarios y profesionales, disponibles para cada joven jugador dispuesto a esforzarse." data-en="Through partnerships with SwingCheck AI and Physis, we deliver professional-grade AI tools directly to youth athletes at no cost. Players receive biomechanics analysis benchmarked against a proprietary dataset of over 12,000 athletes, performance tracking that evolves with them over time, and an AI-powered photo album that documents and narrates their athletic journey. These are not watered-down free versions — they are the same tools used by programs that produce collegiate and professional athletes, made available to every young player who is willing to put in the work.">A través de alianzas con SwingCheck AI y Physis, llevamos herramientas de IA de nivel profesional directamente a los jóvenes atletas sin costo alguno. Los jugadores reciben análisis biomecánico comparado con un conjunto de datos propio de más de 12,000 atletas, seguimiento de rendimiento que evoluciona con ellos a lo largo del tiempo y un álbum de fotos impulsado por IA que documenta y narra su trayectoria atlética. No son versiones gratuitas simplificadas: son las mismas herramientas que usan los programas que forman atletas universitarios y profesionales, disponibles para cada joven jugador dispuesto a esforzarse.</p>
+    <p class="page-body" style="font-weight: 400;" data-es="Nuestra misión va más allá de la plataforma digital. Forward Motion Project México financia y organiza eventos de scouting gratuitos en comunidades de todo el país, garantizando que los atletas talentosos tengan oportunidades reales de ser evaluados por entrenadores y scouts que puedan impulsar sus carreras. Esta organización fue creada por entrenadores con décadas de experiencia en los niveles más altos del deporte profesional, porque hemos visto de primera mano lo que sucede cuando el talento queda sin descubrir. Estamos comprometidos a evitar que esto ocurra en el futuro mediante soluciones proactivas y sostenibles." data-en="Our mission extends beyond the digital platform. Forward Motion Project México funds and organizes free scouting events in communities across the country, ensuring that talented athletes have real opportunities to be evaluated by coaches and scouts who can advance their careers. This organization was built by coaches with decades of experience at the highest levels of professional sport — because we have seen firsthand what happens when talent goes undiscovered. We are committed to preventing this from occurring in the future through proactive and sustainable solutions.">Nuestra misión va más allá de la plataforma digital. Forward Motion Project México financia y organiza eventos de scouting gratuitos en comunidades de todo el país, garantizando que los atletas talentosos tengan oportunidades reales de ser evaluados por entrenadores y scouts que puedan impulsar sus carreras. Esta organización fue creada por entrenadores con décadas de experiencia en los niveles más altos del deporte profesional, porque hemos visto de primera mano lo que sucede cuando el talento queda sin descubrir. Estamos comprometidos a evitar que esto ocurra en el futuro mediante soluciones proactivas y sostenibles.</p>
   </div>
 </main>
 
 <footer>
-  Forward Motion USA <span class="sep">·</span>
+  Forward Motion Project México <span class="sep">·</span>
   <a href="https://swingcheckai.com" target="_blank" rel="noopener">SwingCheck AI</a> <span class="sep">·</span>
   <a href="https://myphysis.ai" target="_blank" rel="noopener">Physis AI</a>
 </footer>
@@ -206,6 +230,7 @@
     });
   })();
 </script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

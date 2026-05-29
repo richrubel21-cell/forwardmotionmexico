@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 16" role="img" aria-label="Flag of Mexico">
+  <!-- Tricolor (official Mexican greens/reds) -->
+  <rect width="28" height="16" fill="#ffffff"/>
+  <rect width="9.34" height="16" fill="#006847"/>
+  <rect x="18.66" width="9.34" height="16" fill="#ce1126"/>
+  <!-- Simplified coat-of-arms nod (reads as an emblem at small sizes; distinguishes from the Italian tricolor) -->
+  <g fill="#6b4f1d">
+    <!-- laurel base -->
+    <path d="M11.55 11.3c1.55.95 3.35.95 4.9 0-.65 1.05-1.65 1.7-2.45 1.7s-1.8-.65-2.45-1.7z"/>
+    <!-- eagle -->
+    <path d="M14.15 5.05c-.95-.1-1.9.3-2.45 1.05.42-.12.85-.12 1.2.07-.55.22-.95.72-1.06 1.36.33-.32.74-.45 1.16-.42-.32.33-.44.83-.3 1.26.3-.42.74-.72 1.25-.83.52-.11.98-.07 1.4.13.42.2.73.53.86.95.32-.53.2-1.16-.13-1.66.42 0 .76.22.97.55-.12-.83-.66-1.55-1.48-1.86.32-.2.65-.22.96-.1-.62-.53-1.45-.74-2.18-.53z"/>
+  </g>
+  <!-- snake -->
+  <path d="M11.65 6.15c-.52 0-.96.22-1.26.55" stroke="#9c6b1f" stroke-width=".42" fill="none" stroke-linecap="round"/>
+</svg>
